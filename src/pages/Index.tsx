@@ -232,6 +232,13 @@ const Index = () => {
               </div>
             ))}
           </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-lg">
+              <Icon name="Calculator" className="mr-2" size={22} />
+              Рассчитать стоимость
+            </Button>
+          </div>
         </div>
       </section>
 

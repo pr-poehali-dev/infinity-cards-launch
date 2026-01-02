@@ -159,7 +159,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
             <p className="text-white/80 text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mx-auto" style={{ maxWidth: '1400px' }}>
             {[
               { name: 'Puma', logo: 'https://cdn.poehali.dev/files/1767366288661.jpg' },
               { name: 'Anta Sports', logo: 'https://cdn.poehali.dev/files/1767365280673.jpg' },
@@ -170,16 +170,16 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
               { name: 'Pulse Gym', logo: 'https://cdn.poehali.dev/files/1767365946130.jpg' },
               { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' }
             ].map((client, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-white/20 min-h-[80px] sm:min-h-[100px] overflow-hidden">
-                <div className="text-center w-full h-full flex items-center justify-center">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-white/20 min-h-[100px] sm:min-h-[120px] md:min-h-[140px] overflow-hidden">
+                <div className="text-center w-full h-full flex items-center justify-center p-3 sm:p-4 md:p-6">
                   {client.logo ? (
                     <img 
                       src={client.logo} 
                       alt={client.name} 
-                      className="w-full h-full object-cover p-2 sm:p-4"
+                      className="w-full h-full object-contain"
                     />
                   ) : (
-                    <div className="text-xs sm:text-sm md:text-base font-bold p-3 sm:p-4 md:p-6">{client.name}</div>
+                    <div className="text-xs sm:text-sm md:text-base font-bold">{client.name}</div>
                   )}
                 </div>
               </div>

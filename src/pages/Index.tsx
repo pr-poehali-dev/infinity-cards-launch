@@ -18,7 +18,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/1767364301680.jpg" 
                 alt="Infinity Cards Logo" 
-                className="w-48 h-48 mx-auto object-contain"
+                className="w-32 h-32 mx-auto object-contain"
               />
             </div>
             
@@ -500,10 +500,6 @@ const Index = () => {
                   <div className="text-sm text-white/60 mb-1">Адрес офиса</div>
                   <p className="text-sm">Кыргызская Республика, г. Бишкек, ул. Федорова, 85</p>
                 </div>
-                <Button className="bg-accent hover:bg-accent/90 text-white w-full mt-4">
-                  <Icon name="PhoneCall" className="mr-2" size={18} />
-                  Заказать звонок
-                </Button>
               </div>
             </div>
 

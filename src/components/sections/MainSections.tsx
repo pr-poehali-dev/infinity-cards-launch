@@ -102,17 +102,21 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Factory Technology */}
       <section 
         ref={(el) => (sectionRefs.current[1] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-white transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 text-white transition-all duration-700 ${
           visibleSections.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Почему завод лучше местного цеха?</h2>
-            <p className="text-muted-foreground text-base sm:text-lg px-4">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
+            <p className="text-white/90 text-base sm:text-lg px-4">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="max-w-2xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://cdn.poehali.dev/projects/4efbd2a9-1934-4314-a806-69cd0fca4699/files/044a4361-c2a2-439a-9c68-cdfeabcb579a.jpg" 
               alt="Промышленное производство пластиковых карт" 
@@ -121,33 +125,33 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-            <Card className="hover-scale">
+            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Printer" size={32} className="text-primary" />
+                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
+                  <Icon name="Printer" size={32} className="text-accent" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Офсетная печать</h3>
-                <p className="text-muted-foreground">Идеальная цветопередача, которая не выцветает. Промышленное качество краски.</p>
+                <p className="text-white/80">Идеальная цветопередача, которая не выцветает. Промышленное качество краски.</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-scale">
+            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Layers" size={32} className="text-primary" />
+                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
+                  <Icon name="Layers" size={32} className="text-accent" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Заводская ламинация</h3>
-                <p className="text-muted-foreground">Пластик спекается в монолит — карта не расслоится в кошельке через месяц.</p>
+                <p className="text-white/80">Пластик спекается в монолит — карта не расслоится в кошельке через месяц.</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-scale">
+            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Scissors" size={32} className="text-primary" />
+                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
+                  <Icon name="Scissors" size={32} className="text-accent" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Точная вырубка</h3>
-                <p className="text-muted-foreground">Края карты идеально гладкие, без заусенцев. Стандарт ISO 7810.</p>
+                <p className="text-white/80">Края карты идеально гладкие, без заусенцев. Стандарт ISO 7810.</p>
               </CardContent>
             </Card>
           </div>
@@ -157,14 +161,18 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Clients */}
       <section 
         ref={(el) => (sectionRefs.current[2] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 text-white transition-all duration-700 ${
           visibleSections.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Компании Кыргызстана, которые выбрали качество</h2>
-            <p className="text-foreground/70 text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
+            <p className="text-white/90 text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mx-auto" style={{ maxWidth: '1400px' }}>
@@ -309,44 +317,48 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Terms */}
       <section 
         ref={(el) => (sectionRefs.current[4] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-secondary via-secondary/95 to-primary/20 text-white transition-all duration-700 ${
           visibleSections.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-2 border-primary/20">
+            <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm">
               <CardContent className="p-6 sm:p-8 md:p-12">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Условия работы</h2>
                 
                 <div className="space-y-4 sm:space-y-6">
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Package" size={20} className="text-primary" />
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Package" size={20} className="text-accent" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg mb-2">Минимальный заказ: от 500 штук</h3>
-                      <p className="text-muted-foreground">Запуск офсетной машины на меньший тираж экономически нецелесообразен. Заказывая от 500 шт., вы получаете себестоимость карты в 2 раза ниже.</p>
+                      <p className="text-white/80">Запуск офсетной машины на меньший тираж экономически нецелесообразен. Заказывая от 500 шт., вы получаете себестоимость карты в 2 раза ниже.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Clock" size={20} className="text-primary" />
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Clock" size={20} className="text-accent" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg mb-2">Срок доставки: 10-14 рабочих дней</h3>
-                      <p className="text-muted-foreground">Производство и доставка в Бишкек. Доставим бесплатно до вашего офиса с полным пакетом документов.</p>
+                      <p className="text-white/80">Производство и доставка в Бишкек. Доставим бесплатно до вашего офиса с полным пакетом документов.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon name="FileText" size={20} className="text-primary" />
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="FileText" size={20} className="text-accent" />
                     </div>
                     <div>
                       <h3 className="font-bold text-base sm:text-lg mb-2">Полный пакет документов</h3>
-                      <p className="text-muted-foreground">Договор, счет на оплату, электронная счет-фактура. Для бухгалтерии все прозрачно.</p>
+                      <p className="text-white/80">Договор, счет на оплату, электронная счет-фактура. Для бухгалтерии все прозрачно.</p>
                     </div>
                   </div>
                 </div>

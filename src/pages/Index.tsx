@@ -217,16 +217,16 @@ const Index = () => {
               { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' },
               { name: 'Федерация Профсоюза КР', logo: null }
             ].map((client, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center hover-scale border border-white/20 min-h-[100px]">
-                <div className="text-center w-full">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-white/20 min-h-[100px] overflow-hidden">
+                <div className="text-center w-full h-full flex items-center justify-center">
                   {client.logo ? (
                     <img 
                       src={client.logo} 
                       alt={client.name} 
-                      className="w-full h-auto max-h-16 object-contain"
+                      className="w-full h-full object-cover p-4"
                     />
                   ) : (
-                    <div className="text-base font-bold">{client.name}</div>
+                    <div className="text-base font-bold p-6">{client.name}</div>
                   )}
                 </div>
               </div>

@@ -1,8 +1,35 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useEffect, useRef, useState } from "react";
 
 const Index = () => {
+  const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = sectionRefs.current.map((section, index) => {
+      if (!section) return null;
+      
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleSections((prev) => new Set(prev).add(index));
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      
+      observer.observe(section);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect());
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -73,7 +100,12 @@ const Index = () => {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+      <section 
+        ref={(el) => (sectionRefs.current[0] = el)}
+        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+          visibleSections.has(0) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Почему мы, а не рекламные агентства?</h2>
@@ -157,7 +189,12 @@ const Index = () => {
       </section>
 
       {/* Factory Technology */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section 
+        ref={(el) => (sectionRefs.current[1] = el)}
+        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+          visibleSections.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Почему завод лучше местного цеха?</h2>
@@ -199,7 +236,12 @@ const Index = () => {
       </section>
 
       {/* Clients */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-secondary text-white">
+      <section 
+        ref={(el) => (sectionRefs.current[2] = el)}
+        className={`py-12 sm:py-16 lg:py-20 bg-secondary text-white transition-all duration-700 ${
+          visibleSections.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Компании Кыргызстана, которые выбрали качество</h2>
@@ -208,7 +250,7 @@ const Index = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {[
-              { name: 'Puma', logo: null },
+              { name: 'Puma', logo: 'https://cdn.poehali.dev/files/1767366288661.jpg' },
               { name: 'Anta Sports', logo: null },
               { name: 'Change Fitness', logo: null },
               { name: 'Bimar', logo: null },
@@ -247,7 +289,12 @@ const Index = () => {
       </section>
 
       {/* Card Types */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section 
+        ref={(el) => (sectionRefs.current[3] = el)}
+        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+          visibleSections.has(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Любые виды карт и персонализации</h2>
@@ -343,7 +390,12 @@ const Index = () => {
       </section>
 
       {/* Terms */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+      <section 
+        ref={(el) => (sectionRefs.current[4] = el)}
+        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+          visibleSections.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <Card className="border-2 border-primary/20">
@@ -388,7 +440,12 @@ const Index = () => {
       </section>
 
       {/* Process */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section 
+        ref={(el) => (sectionRefs.current[5] = el)}
+        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+          visibleSections.has(5) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 px-2">Схема работы: От макета до доставки</h2>
@@ -429,7 +486,12 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-secondary to-secondary/90 text-white">
+      <section 
+        ref={(el) => (sectionRefs.current[6] = el)}
+        className={`py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-secondary to-secondary/90 text-white transition-all duration-700 ${
+          visibleSections.has(6) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 px-2">Готовы обсудить ваш заказ?</h2>

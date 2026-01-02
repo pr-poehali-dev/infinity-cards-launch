@@ -112,8 +112,12 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
+              <Icon name="Factory" size={18} />
+              <span>Промышленное производство</span>
+            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Почему завод лучше местного цеха?</h2>
-            <p className="text-white/90 text-base sm:text-lg px-4">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
+            <p className="text-white/90 text-base sm:text-lg px-4 max-w-3xl mx-auto">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
           </div>
 
           <div className="max-w-2xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
@@ -125,33 +129,33 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
+            <Card className="hover-scale bg-white/15 backdrop-blur-md border-white/30 shadow-xl">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Printer" size={32} className="text-accent" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <Icon name="Printer" size={32} className="text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3">Офсетная печать</h3>
-                <p className="text-white/80">Идеальная цветопередача, которая не выцветает. Промышленное качество краски.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-white">Офсетная печать</h3>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed">Идеальная цветопередача, которая не выцветает. Промышленное качество краски.</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
+            <Card className="hover-scale bg-white/15 backdrop-blur-md border-white/30 shadow-xl">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Layers" size={32} className="text-accent" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <Icon name="Layers" size={32} className="text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3">Заводская ламинация</h3>
-                <p className="text-white/80">Пластик спекается в монолит — карта не расслоится в кошельке через месяц.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-white">Заводская ламинация</h3>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed">Пластик спекается в монолит — карта не расслоится в кошельке через месяц.</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-scale bg-white/10 backdrop-blur-sm border-white/20">
+            <Card className="hover-scale bg-white/15 backdrop-blur-md border-white/30 shadow-xl">
               <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Scissors" size={32} className="text-accent" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/70 mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <Icon name="Scissors" size={32} className="text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3">Точная вырубка</h3>
-                <p className="text-white/80">Края карты идеально гладкие, без заусенцев. Стандарт ISO 7810.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 text-white">Точная вырубка</h3>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed">Края карты идеально гладкие, без заусенцев. Стандарт ISO 7810.</p>
               </CardContent>
             </Card>
           </div>
@@ -171,6 +175,10 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
+              <Icon name="Award" size={18} />
+              <span>Нам доверяют</span>
+            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Компании Кыргызстана, которые выбрали качество</h2>
             <p className="text-white/90 text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
           </div>
@@ -327,38 +335,43 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-2 border-white/20 bg-white/10 backdrop-blur-sm">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-4">
+                <Icon name="FileCheck" size={18} />
+                <span>Прозрачные условия</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2">Условия работы</h2>
+            </div>
+            <Card className="border-2 border-white/30 bg-white/15 backdrop-blur-md shadow-xl">
               <CardContent className="p-6 sm:p-8 md:p-12">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Условия работы</h2>
-                
-                <div className="space-y-4 sm:space-y-6">
-                  <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Package" size={20} className="text-accent" />
+                <div className="space-y-6 sm:space-y-8">
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Package" size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-base sm:text-lg mb-2">Минимальный заказ: от 500 штук</h3>
-                      <p className="text-white/80">Запуск офсетной машины на меньший тираж экономически нецелесообразен. Заказывая от 500 шт., вы получаете себестоимость карты в 2 раза ниже.</p>
+                      <h3 className="font-bold text-base sm:text-lg mb-2 text-white">Минимальный заказ: от 500 штук</h3>
+                      <p className="text-white/90 text-sm sm:text-base leading-relaxed">Запуск офсетной машины на меньший тираж экономически нецелесообразен. Заказывая от 500 шт., вы получаете себестоимость карты в 2 раза ниже.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Clock" size={20} className="text-accent" />
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Clock" size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-base sm:text-lg mb-2">Срок доставки: 10-14 рабочих дней</h3>
-                      <p className="text-white/80">Производство и доставка в Бишкек. Доставим бесплатно до вашего офиса с полным пакетом документов.</p>
+                      <h3 className="font-bold text-base sm:text-lg mb-2 text-white">Срок доставки: 10-14 рабочих дней</h3>
+                      <p className="text-white/90 text-sm sm:text-base leading-relaxed">Производство и доставка в Бишкек. Доставим бесплатно до вашего офиса с полным пакетом документов.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="FileText" size={20} className="text-accent" />
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="FileText" size={24} className="text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-base sm:text-lg mb-2">Полный пакет документов</h3>
-                      <p className="text-white/80">Договор, счет на оплату, электронная счет-фактура. Для бухгалтерии все прозрачно.</p>
+                      <h3 className="font-bold text-base sm:text-lg mb-2 text-white">Полный пакет документов</h3>
+                      <p className="text-white/90 text-sm sm:text-base leading-relaxed">Договор, счет на оплату, электронная счет-фактура. Для бухгалтерии все прозрачно.</p>
                     </div>
                   </div>
                 </div>

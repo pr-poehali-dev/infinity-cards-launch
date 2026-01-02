@@ -120,7 +120,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
             <p className="text-white/90 text-base sm:text-lg px-4 max-w-3xl mx-auto">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
           </div>
 
-          <div className="max-w-2xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="max-w-xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://cdn.poehali.dev/projects/4efbd2a9-1934-4314-a806-69cd0fca4699/files/044a4361-c2a2-439a-9c68-cdfeabcb579a.jpg" 
               alt="Промышленное производство пластиковых карт" 

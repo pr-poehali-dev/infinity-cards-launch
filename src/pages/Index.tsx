@@ -55,9 +55,11 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
-                <Icon name="Calculator" className="mr-2" size={20} />
-                Рассчитать стоимость
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6" asChild>
+                <a href="https://wa.me/996222308088?text=Здравствуйте%2C%20узнал(а)%20о%20вас%20через%20сайт.%20Можете%20сделать%20просчет%20стоимости%20на%20карты%3F" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Calculator" className="mr-2" size={20} />
+                  Рассчитать стоимость
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6" asChild>
                 <a href="tel:+996222308088">
@@ -234,9 +236,11 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-lg">
-              <Icon name="Calculator" className="mr-2" size={22} />
-              Рассчитать стоимость
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-6 shadow-lg" asChild>
+              <a href="https://wa.me/996222308088?text=Здравствуйте%2C%20узнал(а)%20о%20вас%20через%20сайт.%20Можете%20сделать%20просчет%20стоимости%20на%20карты%3F" target="_blank" rel="noopener noreferrer">
+                <Icon name="Calculator" className="mr-2" size={22} />
+                Рассчитать стоимость
+              </a>
             </Button>
           </div>
         </div>

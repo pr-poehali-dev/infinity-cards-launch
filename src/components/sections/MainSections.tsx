@@ -13,7 +13,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Comparison Section */}
       <section 
         ref={(el) => (sectionRefs.current[0] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-white transition-all duration-700 ${
           visibleSections.has(0) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -102,7 +102,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Factory Technology */}
       <section 
         ref={(el) => (sectionRefs.current[1] = el)}
-        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
           visibleSections.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -157,14 +157,14 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Clients */}
       <section 
         ref={(el) => (sectionRefs.current[2] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-secondary text-white transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-white transition-all duration-700 ${
           visibleSections.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Компании Кыргызстана, которые выбрали качество</h2>
-            <p className="text-white/80 text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
+            <p className="text-muted-foreground text-base sm:text-lg px-2">Поставляем карты на регулярной основе</p>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mx-auto" style={{ maxWidth: '1400px' }}>
@@ -178,7 +178,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
               { name: 'Pulse Gym', logo: 'https://cdn.poehali.dev/files/1767365946130.jpg' },
               { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' }
             ].map((client, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-white/20 min-h-[100px] sm:min-h-[120px] md:min-h-[140px] overflow-hidden">
+              <div key={index} className="bg-muted/30 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-border min-h-[100px] sm:min-h-[120px] md:min-h-[140px] overflow-hidden">
                 <div className="text-center w-full h-full flex items-center justify-center p-3 sm:p-4 md:p-6">
                   {client.logo ? (
                     <img 
@@ -208,7 +208,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Card Types */}
       <section 
         ref={(el) => (sectionRefs.current[3] = el)}
-        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
           visibleSections.has(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -309,7 +309,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Terms */}
       <section 
         ref={(el) => (sectionRefs.current[4] = el)}
-        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-white transition-all duration-700 ${
           visibleSections.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -359,7 +359,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
       {/* Process */}
       <section 
         ref={(el) => (sectionRefs.current[5] = el)}
-        className={`py-12 sm:py-16 lg:py-20 transition-all duration-700 ${
+        className={`py-12 sm:py-16 lg:py-20 bg-muted/30 transition-all duration-700 ${
           visibleSections.has(5) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >

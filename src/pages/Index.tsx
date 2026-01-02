@@ -14,6 +14,14 @@ const Index = () => {
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            <div className="mb-6">
+              <img 
+                src="https://cdn.poehali.dev/files/1767364301680.jpg" 
+                alt="Infinity Cards Logo" 
+                className="w-48 h-48 mx-auto object-contain"
+              />
+            </div>
+            
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
               <Icon name="Factory" size={18} />
               <span>Прямые поставки от завода-производителя</span>
@@ -51,9 +59,11 @@ const Index = () => {
                 <Icon name="Calculator" className="mr-2" size={20} />
                 Рассчитать стоимость
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6">
-                <Icon name="Phone" className="mr-2" size={20} />
-                Позвонить
+              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6" asChild>
+                <a href="tel:+996222308088">
+                  <Icon name="Phone" className="mr-2" size={20} />
+                  +996 222 308 088
+                </a>
               </Button>
             </div>
           </div>
@@ -195,10 +205,29 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            {['Puma', 'Anta Sports', 'Change Fitness', 'Bimar', 'Bishkek Petroleum', 'Партнер Нефть', 'Bisport', 'Pulse Gym', 'Uniqum', 'Федерация Профсоюза КР'].map((client, index) => (
+            {[
+              { name: 'Puma', logo: null },
+              { name: 'Anta Sports', logo: null },
+              { name: 'Change Fitness', logo: null },
+              { name: 'Bimar', logo: null },
+              { name: 'Bishkek Petroleum', logo: null },
+              { name: 'Партнер Нефть', logo: null },
+              { name: 'Bisport', logo: null },
+              { name: 'Pulse Gym', logo: null },
+              { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' },
+              { name: 'Федерация Профсоюза КР', logo: null }
+            ].map((client, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center hover-scale border border-white/20 min-h-[100px]">
-                <div className="text-center">
-                  <div className="text-base font-bold">{client}</div>
+                <div className="text-center w-full">
+                  {client.logo ? (
+                    <img 
+                      src={client.logo} 
+                      alt={client.name} 
+                      className="w-full h-auto max-h-16 object-contain"
+                    />
+                  ) : (
+                    <div className="text-base font-bold">{client.name}</div>
+                  )}
                 </div>
               </div>
             ))}
@@ -407,7 +436,7 @@ const Index = () => {
                 <CardContent className="p-6 text-center">
                   <Icon name="Phone" size={32} className="mx-auto mb-3 text-accent" />
                   <div className="font-semibold mb-1">Телефон</div>
-                  <div className="text-sm text-white/80">+996 XXX XXX XXX</div>
+                  <a href="tel:+996222308088" className="text-sm text-white/80 hover:text-white transition-colors">+996 222 308 088</a>
                 </CardContent>
               </Card>
 
@@ -421,13 +450,17 @@ const Index = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
-                <Icon name="Send" className="mr-2" size={20} />
-                Написать в Telegram
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6" asChild>
+                <a href="https://t.me/infinity_cards_tg" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" className="mr-2" size={20} />
+                  Написать в Telegram
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white text-secondary hover:bg-white/90 text-lg px-8 py-6">
-                <Icon name="MessageSquare" className="mr-2" size={20} />
-                Написать в WhatsApp
+              <Button size="lg" variant="outline" className="bg-white text-secondary hover:bg-white/90 text-lg px-8 py-6" asChild>
+                <a href="https://wa.me/996222308088" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageSquare" className="mr-2" size={20} />
+                  Написать в WhatsApp
+                </a>
               </Button>
             </div>
           </div>
@@ -446,7 +479,7 @@ const Index = () => {
               <div className="space-y-4 text-white/80">
                 <div>
                   <div className="text-sm text-white/60 mb-1">Телефон / WhatsApp</div>
-                  <a href="tel:+996XXX" className="text-white hover:text-accent transition-colors">+996 XXX XXX XXX</a>
+                  <a href="tel:+996222308088" className="text-white hover:text-accent transition-colors">+996 222 308 088</a>
                 </div>
                 <div>
                   <div className="text-sm text-white/60 mb-1">Email</div>

@@ -111,6 +111,14 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-2">Почему завод лучше местного цеха?</h2>
             <p className="text-muted-foreground text-base sm:text-lg px-4">Мы не печатаем карты "за час на коленке". Мы запускаем промышленную линию.</p>
           </div>
+
+          <div className="max-w-4xl mx-auto mb-8 sm:mb-12 rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://cdn.poehali.dev/projects/4efbd2a9-1934-4314-a806-69cd0fca4699/files/044a4361-c2a2-439a-9c68-cdfeabcb579a.jpg" 
+              alt="Промышленное производство пластиковых карт" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
           
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             <Card className="hover-scale">

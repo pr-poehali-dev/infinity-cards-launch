@@ -251,15 +251,13 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {[
               { name: 'Puma', logo: 'https://cdn.poehali.dev/files/1767366288661.jpg' },
-              { name: 'Anta Sports', logo: null },
+              { name: 'Anta Sports', logo: 'https://cdn.poehali.dev/files/1767365280673.jpg' },
               { name: 'Change Fitness', logo: null },
               { name: 'Bimar', logo: null },
-              { name: 'Bishkek Petroleum', logo: null },
-              { name: 'Партнер Нефть', logo: null },
+              { name: 'Bishkek Petroleum', logo: 'https://cdn.poehali.dev/files/1767366417226.jpg' },
               { name: 'Bisport', logo: null },
-              { name: 'Pulse Gym', logo: null },
-              { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' },
-              { name: 'Федерация Профсоюза КР', logo: null }
+              { name: 'Pulse Gym', logo: 'https://cdn.poehali.dev/files/1767365946130.jpg' },
+              { name: 'Uniqum', logo: 'https://cdn.poehali.dev/files/1767364890464.jpg' }
             ].map((client, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover-scale border border-white/20 min-h-[80px] sm:min-h-[100px] overflow-hidden">
                 <div className="text-center w-full h-full flex items-center justify-center">
@@ -559,7 +557,7 @@ const Index = () => {
                   <a href="mailto:info@infinitycards.kg" className="text-white hover:text-accent transition-colors">info@infinitycards.kg</a>
                 </div>
                 <div>
-                  <div className="text-sm text-white/60 mb-1">Адрес офиса</div>
+                  <div className="text-sm text-white/60 mb-1">Юридический адрес</div>
                   <p className="text-sm">Кыргызская Республика, г. Бишкек, ул. Федорова, 85</p>
                 </div>
               </div>

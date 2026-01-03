@@ -23,7 +23,7 @@ const ContactSection = ({ sectionRef, isVisible }: ContactSectionProps) => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Icon name="MapPin" size={32} className="mx-auto mb-3 text-accent" />
-                <div className="font-semibold mb-1">Офис в Бишкеке</div>
+                <div className="font-semibold mb-1 text-white">Офис в Бишкеке</div>
                 <div className="text-sm text-white/80">ул. Юсупа Абдрахманова 249</div>
               </CardContent>
             </Card>
@@ -31,7 +31,7 @@ const ContactSection = ({ sectionRef, isVisible }: ContactSectionProps) => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Icon name="Phone" size={32} className="mx-auto mb-3 text-accent" />
-                <div className="font-semibold mb-1">Телефон</div>
+                <div className="font-semibold mb-1 text-white">Телефон</div>
                 <a href="tel:+996222308088" className="text-sm text-white/80 hover:text-white transition-colors">+996 222 308 088</a>
               </CardContent>
             </Card>
@@ -39,7 +39,7 @@ const ContactSection = ({ sectionRef, isVisible }: ContactSectionProps) => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Icon name="MessageCircle" size={32} className="mx-auto mb-3 text-accent" />
-                <div className="font-semibold mb-1">Мессенджеры</div>
+                <div className="font-semibold mb-1 text-white">Мессенджеры</div>
                 <div className="text-sm text-white/80">WhatsApp / Telegram</div>
               </CardContent>
             </Card>

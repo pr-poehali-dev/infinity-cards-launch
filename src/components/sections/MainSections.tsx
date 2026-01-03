@@ -389,6 +389,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
             <div className="space-y-4 sm:space-y-6">
               {[
                 { icon: "FileCheck", title: "Заявка и макет", desc: "Проверяем ваш дизайн на соответствие ISO стандартам" },
+                { icon: "Sparkles", title: "Производство прототипа по заданным требованиям", desc: "Создаем образец для утверждения перед массовым производством" },
                 { icon: "FileSignature", title: "Договор с местным юр. лицом", desc: "Вы платите нам в сомах, мы решаем вопросы валютных переводов" },
                 { icon: "Factory", title: "Производство", desc: "Запуск линии. Контроль качества на каждом этапе" },
                 { icon: "Truck", title: "Доставка и документы", desc: "Привозим карты в офис вместе с закрывающими документами" }

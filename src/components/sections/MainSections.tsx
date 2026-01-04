@@ -179,7 +179,7 @@ const MainSections = ({ sectionRefs, visibleSections }: MainSectionsProps) => {
             {[
               { name: 'Puma', logo: 'https://cdn.poehali.dev/files/1767366288661.jpg' },
               { name: 'Anta Sports', logo: 'https://cdn.poehali.dev/files/1767365280673.jpg' },
-              { name: 'Change Fitness', logo: null },
+              { name: 'Change Fitness', logo: 'https://cdn.poehali.dev/files/1767710776569.jpg' },
               { name: 'Bimar', logo: null },
               { name: 'Bishkek Petroleum', logo: 'https://cdn.poehali.dev/files/1767366417226.jpg' },
               { name: 'Bisport', logo: 'https://cdn.poehali.dev/files/1767366609198.jpg' },
